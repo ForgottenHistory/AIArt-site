@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Art Prompts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../js/prompts.js" defer></script>
+    <script src="../js/sidebar.js" defer></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><button onclick="loadContent('index')">Home</button></li>
+                <li><button onclick="loadContent('prompts')">Prompts</button></li>
+                <li><button onclick="loadContent('pixiv')">Pixiv</button></li>
+                <li><button onclick="loadContent('deviantart')">DeviantArt</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="character-sidebar">
+        <div class="character-sidebar">
+            <h2>Concepts</h2>
+            <button class="character-button" id="addCharacterButton">Add</button>
+            <button class="character-button" id="editCharacterButton">Edit</button>
+            <button class="character-button" id="deleteCharacterButton">Delete</button>
+            <h2>Search name</h2>
+            <input type="text" id="character-searchBar" placeholder="Search characters" />
+        </div>
+    </div>
+
+    <div class="content" id="charactersGrid">
+        <!-- The character images will be dynamically added here -->
+    </div>
+
+    <!-- Add this dialog just before the closing </body> tag -->
+    <div id="addCharacterDialog" class="dialog">
+        <div class="dialog-content">
+            <h2>Add New Character</h2>
+            <label for="characterNameInput">Name:</label>
+            <input type="text" id="characterNameInput" />
+            <label for="characterImageInput">Image (PNG):</label>
+            <input type="file" id="characterImageInput" accept="image/png" />
+            <button id="saveCharacterButton">Save</button>
+            <button id="cancelCharacterButton">Cancel</button>
+        </div>
+    </div>
+</body>
+
+</html>

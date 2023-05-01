@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Prompts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../js/sidebar.js" defer></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><button onclick="loadContent('index')">Home</button></li>
+                <li><button onclick="loadContent('prompts')">Prompts</button></li>
+                <li><button onclick="loadContent('pixiv')">Pixiv</button></li>
+                <li><button onclick="loadContent('deviantart')">DeviantArt</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="character-content">
+        <h1 id="characterName"></h1>
+        <button id="addPromptButton">Add Prompt</button>
+        <div id="prompts-container">
+            <!-- The AI art prompts will be dynamically added here -->
+        </div>
+
+    </div>
+
+    <div id="addPromptDialog" class="dialog">
+        <div class="dialog-content">
+            <h2>Add New Prompt</h2>
+            <label for="promptTitle">Title:</label>
+            <input type="text" id="promptTitle" />
+            <label for="promptDescription">Prompt:</label>
+            <textarea id="promptDescription"></textarea>
+            <label for="deviantartTags">DeviantArt Tags:</label>
+            <input type="text" id="deviantartTags" />
+            <button id="savePromptButton">Save</button>
+            <button id="cancelPromptButton">Cancel</button>
+        </div>
+    </div>
+    <script src="../js/character.js" defer></script>
+</body>
+
+</html>

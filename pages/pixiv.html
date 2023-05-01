@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixiv Tags</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><button onclick="loadContent('index')">Home</button></li>
+                <li><button onclick="loadContent('prompts')">Prompts</button></li>
+                <li><button onclick="loadContent('pixiv')">Pixiv</button></li>
+                <li><button onclick="loadContent('deviantart')">DeviantArt</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h1>Pixiv Tags</h1>
+        <button id="addTagButton">Add Tag</button>
+        <div id="tags-container">
+            <!-- The Pixiv tags will be dynamically added here -->
+        </div>
+    </div>
+
+    <div id="addTagDialog" class="dialog">
+        <div class="dialog-content">
+            <h2>Add New Tag</h2>
+            <label for="japaneseTag">Japanese:</label>
+            <input type="text" id="japaneseTag" />
+            <label for="englishTag">English:</label>
+            <input type="text" id="englishTag" />
+            <div class="dialog-buttons">
+                <button id="saveTagButton">Save</button>
+                <button id="cancelTagButton">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/pixiv.js" defer></script>
+    <script src="../js/sidebar.js" defer></script>
+</body>
+</html>
