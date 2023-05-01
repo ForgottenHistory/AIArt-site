@@ -12,6 +12,9 @@ function loadContent(pageName) {
         case 'deviantart':
             window.location.href = 'deviantart.html';
             break;
+        case 'wildcards':
+            window.location.href = 'wildcards.html';
+            break;
     }
 }
 
@@ -28,6 +31,9 @@ function loadContentIndex(pageName) {
             break;
         case 'deviantart':
             window.location.href = 'pages/deviantart.html';
+            break;
+        case 'wildcards':
+            window.location.href = 'pages/wildcards.html';
             break;
     }
 }
